@@ -5,13 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1 class="heading">Tic-Tac-Toe Game</h1><br><br>
+    <header class="hed">
+        <div class="info">
+            <span><i><b>Name:</b></i> Husnain Murtaza</span>
+            <span><i><b>Degree:</b></i> Computer Engineering</span>
+            <span><i><b>LinkedIn:</b></i> <a href="https://www.linkedin.com/in/husnain-murtaza-190679236/" target="_blank"> Husnain Murtaza</a></span>
+        </div>
+        
+    </header>
+    <h1 class="heading">Tic-Tac-Toe Game</h1>
+    <h2 class="winner"></h2>
+    <aside class="turn">Turn: <span id="turn"></span></aside>
+
     <div class="box">
         <div class="buttons">
-        <button id="b">X</button>
-        <button id="b">4</button>
+        <button id="b"></button>
+        <button id="b"></button>
         <button id="b"></button>
         <button id="b"></button>
         <button id="b"></button>
@@ -22,8 +37,10 @@
         
         </div>
         
-    </div>  
-    <button class="reset" onclick="resetGame()">Reset Game</button>
-    <script src="script.js"></script>
+    </div> 
+    <div class="button"> 
+    <button class="reset" onclick="reset()">Reset Game</button>
+    <button class="reset" onclick="newGame()">New Game</button></div>
+    <script src="app.js"></script>
 </body>
 </html>
