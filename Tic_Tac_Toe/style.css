@@ -14,7 +14,10 @@ body {
   background: radial-gradient(ellipse at top, #180e29 0%, #090514 100%);
   font-family: 'Fredoka', sans-serif;
   color: #f1f5f9;
-  padding: 20px;
+  padding: 15px;
+  width:100%;
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
 .heading {
@@ -35,11 +38,12 @@ body {
 /* Status Badges */
 .turn, .winner {
   font-family: 'Fredoka', sans-serif;
-  
-  font-size: 1.25rem;
+  max-width:95%;
+  text-align: center;
+  font-size: clamp(0.9rem,4vw,1.25rem);
   font-weight: 700;
   margin-bottom: 1.2rem;
-  padding: 0.55rem 1.6rem;
+  padding: 0.5rem 1rem;
   border-radius: 16px;
   background: #1c1033;
   color: #e2e8f0;
@@ -60,20 +64,21 @@ body {
   background: #0d0718;
   border: 3px solid #adf10f;
   box-shadow: 0 12px 0 #05020a, 0 25px 40px rgba(0, 0, 0, 0.8);
-  height: 65vmin;
-  width: 65vmin;
-  max-width: 410px;
-  max-height: 410px;
-  border-radius: 28px;
+  height: min(90vw,410px);
+  width: min(90vw,410px);
+  
+  padding:clamp(8px,2vw,16px);
+  border-radius: clamp(16px,15vw,28px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 12px;
+  gap: clamp(16px,4vw,18px);
   padding: 16px;
+  
 }
 
 /* 3D Interactive Tiles */
-#b {
+.b {
   width: 100%;
   height: 100%;
   border: 3px solid #2d1854;
@@ -91,19 +96,19 @@ body {
   outline: none;
 }
 
-#b:hover:not(:disabled) {
+.b:hover:not(:disabled) {
   background: #231345;
   border-color: #44247c;
   transform: translateY(-2px);
   box-shadow: 0 9px 0 #090414, 0 10px 15px rgba(0, 0, 0, 0.6);
 }
 
-#b:active:not(:disabled) {
+.b:active:not(:disabled) {
   transform: translateY(4px);
   box-shadow: 0 3px 0 #090414, 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
-#b:disabled {
+.b:disabled {
   cursor: not-allowed;
 }
 
@@ -111,23 +116,27 @@ body {
 .x-style {
   color: #f50e57 !important;
   text-shadow: 3px 3px 0 #090003;
+  font-size: clamp(2rem, 12vw, 3.5rem);
 }
 
 .o-style {
   color: #adf10f !important;
   text-shadow: 3px 3px 0 #161717;
+  font-size: clamp(2rem, 12vw, 3.5rem);
 }
 
 /* Control Buttons Layout */
 .button {
   display: flex;
-  gap: 1.2rem;
+  gap: clamp(8px,3vw,20px);
   margin-top: 1.8rem;
+  justify-content:center;
+  width:min(90%,500px)
 }
 
 .reset {
   font-family: 'Fredoka', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.75rem,3vw,1rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -135,10 +144,11 @@ body {
   border: 3px solid #25219b;
   border-radius: 18px;
   color: #adf10f;
-  padding: 14px 28px;
+  padding: 12px 15px;
   cursor: pointer;
   transition: all 0.15s ease;
   box-shadow: 0 8px 0 #0f0e17, 0 15px 25px rgba(0, 0, 0, 0.5);
+  
 }
 
 .reset:hover {
@@ -158,18 +168,79 @@ body {
 }
 .hed{
   width: 100%;
-  height: 50px;
+  align-content: center;
+  justify-content: space-evenly;
+  height: auto;
+  min-height:50px;
   background: #0a0258;
   border: 2px solid #fafafc;
   border-radius: 10px;
   margin-bottom: 20px;
+  padding:6px;
 }
 .info{
   display: flex;
-  align-content: center;
+  min-height:38px;
   align-items: center;
-  height: 100%;
-  gap: 20px;
-  margin-left: 20px;
+  height: auto;
+  gap:5px 15px;
+  margin: 0;
+  width:100%;
   justify-content: space-between;
+  font-size: clamp(0.55rem,1.5vw,1rem);
+  line-height: 1.2;
+  flex-wrap:wrap;
+  padding:8px;
+}
+.fot{
+  width:100%;
+  height: auto;
+  min-height:50px;
+  background: #0a0258;
+  border: 2px solid #fafafc;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+  padding:8px;
+  font-size:clamp(0.6rem,1.2vw,1rem)
+}
+
+@media (max-width:450px){
+  .hed{
+    width:92vw;
+    min-height:45px;
+  }
+  .info{
+    gap:2px 8px;
+    font-size:0.52rem;
+  }
+  .fot{
+    width:92vw;
+    min-height:40px;
+    padding:5px;
+    font-size:0.58rem;
+  }
+}
+
+@media (mx-width:600px){
+  .hed,
+  .fot {
+    width:92vw;
+  }
+  .info{
+    justify-content:center;
+    gap:3px 10px;
+    font-size:0.6rem;
+  }
+  .fot{
+    font-size:0.65rem;
+  }
+}
+@media (max-width:600px){
+  .heading{
+    text-align:center;
+  }
 }

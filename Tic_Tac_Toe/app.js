@@ -1,4 +1,4 @@
-let h=document.querySelectorAll("#b");
+let h=document.querySelectorAll(".b");
 
 let u=document.querySelector(".reset");
 
