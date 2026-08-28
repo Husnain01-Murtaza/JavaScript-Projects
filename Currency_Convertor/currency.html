@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURRENCY CONVERTOR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="currency.css">
+     <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1 id="heading">CURRENCY CONVERTOR</h1>
+<main class="mainSec">
+   <div class="inputAmount">
+        <input type="number" id="amount" placeholder="Enter amount">
+    </div>
+    <div class="converts">
+    <div class="fromandto">
+        <label for="fromCurrency">From:</label><br>
+        <div class="ui">
+        <img src="https://flagsapi.com/PK/flat/64.png" height="23px" width="23px">
+        <select id="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="CAD">CAD</option>
+            <option value="AUD">AUD</option>
+            <option value="INR">INR</option>
+            
+        </select>
+        </div>
+<i class="fa-solid fa-arrow-right-arrow-left" height="23px" width="23px"></i>    
+    </div><div class="to">
+        <label for="toCurrency">To:</label>
+        <img src="https://flagsapi.com/PK/flat/64.png">
+        <select id="toCurrency">
+            <option value="USD">USD</option>..
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="CAD">CAD</option>
+            <option value="AUD">AUD</option>
+            <option value="INR">INR</option>
+        </select>
+        </div>
+    </div>
+    
+    <div class="results">
+        <p id="result">1USD = 1.23PKR</p>
+    </div>
+    <button id="convertBtn">GET EXCHANGE RATE</button>
+    
+               
+</main>
+</body>
+</html>
