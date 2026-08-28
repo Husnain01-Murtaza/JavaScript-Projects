@@ -14,13 +14,16 @@
 <body>
     <h1 id="heading">CURRENCY CONVERTOR</h1>
 <main class="mainSec">
-   <div class="inputAmount">
-        <input type="number" id="amount" placeholder="Enter amount">
+   <div class="inputSec">
+
+    <label for="amount" class="la">Enter Amount:</label>
+        <input type="number" id="amount"><br><br>
     </div>
-    <div class="converts">
-    <div class="fromandto">
-        <label for="fromCurrency">From:</label><br>
-        <div class="ui">
+   
+    <div class="convesrsionSec">
+        <div class="label1">
+        <label for="fromCurrency" class="la">From:</label>
+        <div class="flag1">
         <img src="https://flagsapi.com/PK/flat/64.png" height="23px" width="23px">
         <select id="fromCurrency">
             <option value="USD">USD</option>
@@ -33,10 +36,11 @@
             
         </select>
         </div>
+        </div>
 <i class="fa-solid fa-arrow-right-arrow-left" height="23px" width="23px"></i>    
-    </div><div class="to">
-        <label for="toCurrency">To:</label>
-        <img src="https://flagsapi.com/PK/flat/64.png">
+    <div class="label2">
+        <label for="toCurrency" class="la">To:</label>
+        <div class="flag2"><img src="https://flagsapi.com/PK/flat/64.png" height="23px" width="23px">
         <select id="toCurrency">
             <option value="USD">USD</option>..
             <option value="EUR">EUR</option>
@@ -47,11 +51,12 @@
             <option value="INR">INR</option>
         </select>
         </div>
-    </div>
-    
+       </div>
+   
+    </div><br
     <div class="results">
         <p id="result">1USD = 1.23PKR</p>
-    </div>
+    </div><br>
     <button id="convertBtn">GET EXCHANGE RATE</button>
     
                

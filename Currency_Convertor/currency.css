@@ -10,7 +10,7 @@ body{
     color: #fafafc;
     justify-content: center;
     align-items: center;
-    align-items: center;
+    align-content: center;
     min-height: 100vh;
 }
 .mainSec{
@@ -20,45 +20,107 @@ body{
     align-items: center;
     background-color:rgb(12, 19, 96);
     border-radius:25px;
+    width: 50vw;
+    height: 50vh;
    
     
 }
+.label1,.label2{
+    display: flex;
+    flex-direction: column;
+    
+}
 #fromCurrency, #toCurrency{
-    width: 10vw;
-    height: 5vw;
-    border-radius: 5px;
-    border: none;
-    background-color: #fffcfc;
-    color: #ae1a1a;
-    font-size: 14px;
+    border:none;
+    
     
 }
 .converts{
-    display:flex;
-}
-.convert{
-    display:flex;
-}
-.ui{
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    align-items: center;
-    gap: 2vw;
-    background-color: #fbfbfb;
-    border-radius: 5px;
-    
+    gap: 10px;
+    margin-top: 20px;
 }
-
-.uo{
-    display:flex;
+.convesrsionSec{
+    display: flex;
     justify-content: center;
     align-items: center;
-    align-items: center;
-    gap: 2vw;
-    background-color: #fbfbfb;
-    border-radius: 5px;
-    
+    align-content: center;
+    gap: 3vw;
 }
 
+.flag1,.flag2{
+    background-color: #fff;
+    border-radius: 5px;
+    width:10vw;
+    height: 3vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+#convertBtn{
+    background-color: #fff;
+    color: rgb(12, 19, 96);
+    border: none;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    height: 5vh;
+    width: 28vw;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    
+    
+}
+.inputAmount{
+  
+    background-color: #fff;
+    color: rgb(12, 19, 96);
+    border: none;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    height: 5vh;
+    width: 20vw;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border:none;
+    
+    
 
+}
+.inputSec{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+#amount{
+     background-color: #fff;
+    color: rgb(12, 19, 96);
+    border: none;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    height: 5vh;
+    width: 28vw;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border:none;
+}
+.la{
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
